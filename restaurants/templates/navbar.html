@@ -9,9 +9,11 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'restaurant-create' %}">Create Restaurant</a>
       </li>
+      {% if user.is_authenticated %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'signout' %}">Logout</a>
       </li>
+      {% endif %}
     </ul>
     
     <form class="form-inline my-2 my-lg-0">
